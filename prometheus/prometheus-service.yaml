@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-service
+  namespace: development
+spec:
+  selector:
+    prometheus: prometheus-dev
+  ports:
+    - name: web
+      port: 9090
+      targetPort: web
